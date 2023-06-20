@@ -1,0 +1,17 @@
+.videosidebar{
+    position: absolute;
+    top: 50%; /*tira de cima pra baixo*/
+    right: 10px;
+    color: white;
+}
+
+.videoSidebar__options{
+    padding: 20px; /*separa aos icones*/
+    text-align: center; /*centraliza o iten*/
+}
+@media only screen and (max-width: 440px){ /*responsividade*/
+    .videosidebar{
+        top: 43%; /*pra subir um pouco o like, message, compratilhar*/
+    }
+    }
+  

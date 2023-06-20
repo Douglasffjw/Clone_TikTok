@@ -1,0 +1,12 @@
+.video{
+    height: 100%;/**vai toomar o tamanho do pai dele*/
+    width: 100%; /*vai toomar o tamanho do pai dele */
+    scroll-snap-align: start;/*esse ccomponente q vai ter o snap*/
+    position: relative; /*para q os outros os elemento q aparecer na frente dele tenha uma posiçao absoluta e se comporte na tela*/ 
+}
+
+.video__player{
+    height: 100%;
+    width: 100%;
+    object-fit: fill; /*ficar tamanho total do play e das bordas*/
+}

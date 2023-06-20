@@ -1,0 +1,63 @@
+.videoFooter{
+    position: relative; /*vai englobar tds os componentes*/
+    bottom: 24%;/*vai ta 200 pixes do chao*/
+    color: white;
+    margin: 30px;
+}
+
+.videoFooter__text h3{
+    padding-bottom: 20px;/*espaço por dentro, margin é pra fora*/
+}
+
+.videoFooter__text p{
+    padding-bottom: 20px;
+}
+
+.videoFooter__music{
+    display: flex;/*faz o elemento fcr do lado do outro*/
+}
+
+.videoFooterMusic__txt{
+  width: 80%;
+  overflow: hidden;/*esconder= faz com q a legenda nao passe do icon*/
+}
+
+.videoFooterMusic__txt p{
+    animation: moveTheTxt 3s infinite linear;
+}
+
+.visualFooter__record{ /*DISCOOO*/
+    animation: spinTheRecord 3s infinite linear;/*5s pra fzr a animation //infinite é o loop // sempre na msm velocidade*/
+    position:absolute;/*q ele movimente de forma solta ele n vai de pender de outro componente*/
+    bottom:5px; /*a distancia q vc quer da parte debaixo*/
+    right: -2%; /*a distancia q vc quer da parte da esquerda*/
+    height: 50px;/*mudar o tamanho dele*/
+    filter: invert(1); /*inverteu a cor dele*/
+}
+
+@keyframes spinTheRecord{/*giri o record*/
+    0%{ /*estado incial parado*/
+        transform: rotate(0deg);/* trans manipula as imagens // rotate aceita um valor de graus*/
+    }
+    100%{ /*no final de uma rodada*/
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveTheTxt{
+    0%{ /*estado incial parado*/
+        transform: translateX(100%);/* trans manipula as imagens // rotate aceita um valor de graus*/
+    }
+    100%{ /*no final de uma rodada*/
+        transform: translateX(-100%);
+    }
+}
+
+@media only screen and (max-width: 440px){ /*responsividade*/
+    .videoFooter{
+      bottom: 27%;   
+    }
+    .videoFooterMusic__txt{
+        width: 78%; /*pra descer um pouco a tela*/
+    }
+  }

@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+html{
+  scroll-snap-type: y mandatory;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  background-color: rgb(0, 0, 0);
+  height: 100vh; /*tela do usuario vai ser total da tela*/
+  display: grid; 
+  place-items: center;/*centraliza o video*/
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__videos{
+  height: 100vh;
+  max-height: 800px;
+  width: 80%; /*largura padrao ao abrir*/
+  max-width: 500px; /*tamanho mxm da largura*/
+  border: 1px solid black;
+  border-radius: 20px; /*arredonda o video*/
+  overflow: scroll;/*quando eceder o tamanho, volte pro scroll e n fique passando da bordar */
+  scrollbar-width: none; /*apaga a barrinha de ficar subino e deseno*/
+  scroll-snap-type: y mandatory; /*eixo vertical*/
+  position: relative; /*para q os outros os elemento q aparecer na frente dele tenha uma posiçao absoluta e se comporte na tela*/
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*tem navegadores q se comportar diferente ent precisa de abaixo*/
+/*Esconde a scroll bar no chrome, safari e opera */
+.app__videos::-webkit-scrollbar{
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+/*Esconde a scroll bar no internet explorer, edge e firefox */
+.app__videos{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 440px){ /*responsividade*/
+  .app__videos{
+    width: 100%;
+    height: 100vh;
   }
 }
