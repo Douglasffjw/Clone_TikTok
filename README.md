@@ -18,6 +18,8 @@
 Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 
 - JavaScript;
+- HTML
+- CSS
 - React;
 - Firebase;
 
